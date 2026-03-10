@@ -4,50 +4,75 @@
   <head>
     <title>Makkeyu - My Portfolio</title>
     <style>
-  /* ----general------ */
-
-
-
-
-
-
-
-
-
-
-
       
+  /* --------------------General------------------------ */
+      body { background-color: rgba(74,19,154,0.8); color: blue; font-size: "Times New Roman"; margin; 0; padding; 0; }
+
+  /*-------------------- Header -------------------------*/
+      .header { background-color: rgba(95,219,232,08); text-align: center; padding: 50px; }
+      .header h1 { color: rgba(91,116,118,0.43); font-size: 60px; margin: 0; }
+      .header p { color: rgba(39,117,26,43); font-size: 20px; }
+
+  /*---------------------------About me---------------------------*/
+      .about {color: rgba(150,197,239,0.43); padding: 40px; text-align: center; font-size: 18px; line-height: 1.8; }
+      .about h2 { color: rgba(207,216,225,0.23); font-size: 35px; }
+
+  /*--------------------------SKILLS-------------*/
+      .skills { padding: 40px; text-align: center; }
+      .skills h2 { color: rgba(207,216,225,0.23); font-size: 35px; }
+      .skill-box { display: flex; justify-content: center; gap: 15px; } 
+      .skill { background-color: rgba(32,75,99,0.23); color: gold; padding: 15px 25px; border: 1px solid gold; font-size: 16px; } 
+
+
+
+  /*----------------------CONTACTS---------------*/
+      .contact { background-color: rgba(136,163,188,0.23); padding: 40px; text-align: center; } 
+      .contact h2 { color: rgba(207,216,225,0.23); font-size: 35px; }
+      .contact input { padding: 10px; font-size: 16px; width: 250px; border: 1px solid gold; background-color: rgba(47,81,112,0.23); color: white; } 
+      .contact button { background-color: rgba(78,118,157,0.23); color: black; padding: 10px 15px; font-size: 16px; border: none; cursor: pointer; } 
+      .contact h3 { color: rgba(144,78,157,0.23); font-size: 20px; }
+
+ 
     </style>
   </head>
-  
-  
+  <body>
 
+   <!------------------HEADER AREA-------------------->
+    <div class="header">
+      <h1>Makkeyu</h1>
+      <p>My Portfolio</p>
+      </div>
 
+    <!------------ABOUT---------------->
+    <div class="about">
+      <h2>About Me</h2>
+      <p>Hello This is Makkeyu, i so happy to visit my page here and im just a beginnner in IT world. Please respct my page. Thank you</p>
+    </div>
 
+    
+    <!-------------------SKILLS---------------->
+    <div class="skill-box">
+      <h2>My Skills</h2>
+      <div class="skills-box">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">Javascript</div>
+          <div class="skill">Mobile Legends</div>
+      </div>
+    <!-----------------CONTACTS---------------->
 
+    <div class="contact">
+        <h2>Contact</h2>
+        <input id="userName" type="text" placeholder="Enter Your Name">
+        <br><br>
+        <button onlick="User()"> Hello!! Welcome</button>
+        <h3 id="message"></h3>
 
+      <script>
+        function User() { Let Visitor= document.getElementById("userName").value; document.getElementById("message").innerHTML =" Hello "+ User +" Thank you for coming!!"; }
+        
+      </script>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+  </body>
 </html>
