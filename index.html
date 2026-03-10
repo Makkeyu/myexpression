@@ -1,51 +1,31 @@
-<!DOCTYPE html>
+
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <title>My Interactive Page</title>
-        <style>
-            body {
-                background-color: black;
-                color: white;
-                font-family: Arial;
-                text-align: center;
-            }
-            h1 {
-                color: yellow;
-                font-size: 50px;
-            }
-            button {
-                background-color: gold;
-                color: black;
-                font-size: 18px;
-                padding: 10px 20px;
-                border: none;
-                cursor: pointer;
-            }
-            input {
-                font-size: 18px;
-                padding: 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <h1 id="title">Makkeyu's Page</h1>
-        <button onclick="changeTitle()">Change Title</button>
 
-        <br><br>
+  <head>
+    <title> My Lesson Today</title>
+    <style>
+      body { background-color: black; color: white; } 
+      h1 { color: gray; font-size: 50px; font-family: "Time New Roman"; } 
+      a { color: white; font-size: 15px; }
+      p { color: yellow; font-size: 10px; } 
+      ul { color: gold; font-size: 15px; } 
+    </style>
+  </head>
 
-        <input id="nameInput" type="text" placeholder="Enter your name">
-        <button onclick="greetUser()">Greet Me!</button>
-        <h2 id="greeting"></h2>
+  <body>
+    <h1 id="title"> Makkeyu </h1>
+    <button onclick="changeTitle()"> Change Title </button>
+    <br>
+    <input id="nameInput" type="text" placeholder="Enter your name"> 
+    <button onclick="greetUser()">My Favorite Game is</button>
+    <h2 id="game"></h2>
 
-        <script>
-            function changeTitle() {
-                document.getElementById("title").innerHTML = "I will be an IT Professional!";
-            }
+    <script>
+      function changeTitle() { document.getElementById("title").innerHTML = "I will be professional Soon"; }
+      function greetUser() { let name= document getElementById("nameInput").value; document.getElementById ("game").innerHTML = "Hello" + name + "Welcome to my World"; }                         
+    </script>
+    
+  </body>
 
-            function greetUser() {
-                let name = document.getElementById("nameInput").value;
-                document.getElementById("greeting").innerHTML = "Hello " + name + "! Welcome to my page!";
-            }
-        </script>
-    </body>
 </html>
