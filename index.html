@@ -6,7 +6,7 @@
     <style>
       
   /* --------------------General------------------------ */
-      body { background-color: rgba(198,218,242,0.8); color: blue; font-size: "Times New Roman"; margin; 0; padding; 0; }
+      body { background-color: rgba(198,218,242,0.8); color: blue; font-family: "Times New Roman"; margin: 0; padding: 0; }
 
   /*-------------------- Header -------------------------*/
       .header { background-color: rgba(35,36,130,0.8); text-align: center; padding: 50px; }
@@ -51,7 +51,7 @@
     <!-------------------SKILLS---------------->
     <div class="skills">
       <h2>My Skills</h2>
-      <div class="skills-box">
+      <div class="skill-box">
           <div class="skill">⚡ HTML</div>
           <div class="skill">🎨 CSS</div>
           <div class="skill">💻 Javascript</div>
@@ -64,12 +64,12 @@
         <h2>Contact</h2>
         <input id="userName" type="text" placeholder="Enter Your Name">
         <br><br>
-        <button onlick="User()"> Hello!! Welcome</button>
+        <button onclick="User()"> Hello!! Welcome</button>
         <h3 id="message"></h3>
 
       <script>
-        function User() { Let Visitor= document.getElementById("userName").value; 
-                         document.getElementById("message").innerHTML =" Hello "+ Visitor +" Thank you for coming!!"; }
+        function User() { Let visitor= document.getElementById("userName").value; 
+                         document.getElementById("message").innerHTML =" Hello "+ visitor +" Thank you for coming!!"; }
         
       </script>
     </div>
