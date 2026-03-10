@@ -27,7 +27,7 @@
 
   /*----------------------CONTACTS---------------*/
       .contact { background-color: rgba(136,163,188,0.23); padding: 40px; text-align: center; } 
-      .contact h2 { color: rgba(207,216,225,0.23); font-size: 35px; }
+      .contact h2 { color: rgba(12,12,12,1); font-size: 35px; }
       .contact input { padding: 10px; font-size: 16px; width: 250px; border: 1px solid gold; background-color: rgba(47,81,112,0.23); color: white; } 
       .contact button { background-color: rgba(78,118,157,0.23); color: black; padding: 10px 15px; font-size: 16px; border: none; cursor: pointer; } 
       .contact h3 { color: rgba(144,78,157,0.23); font-size: 20px; }
@@ -59,8 +59,9 @@
           <div class="skill">Javascript</div>
           <div class="skill">Mobile Legends</div>
       </div>
+    </div>
+    
     <!-----------------CONTACTS---------------->
-
     <div class="contact">
         <h2>Contact</h2>
         <input id="userName" type="text" placeholder="Enter Your Name">
@@ -69,7 +70,8 @@
         <h3 id="message"></h3>
 
       <script>
-        function User() { Let Visitor= document.getElementById("userName").value; document.getElementById("message").innerHTML =" Hello "+ User +" Thank you for coming!!"; }
+        function User() { Let Visitor= document.getElementById("userName").value; 
+                         document.getElementById("message").innerHTML =" Hello "+ Visitor +" Thank you for coming!!"; }
         
       </script>
     </div>
