@@ -1,1 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    <title>Makkeyu - My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+    <style>
+      
+  /* --------------------General------------------------ */
+      body { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
 
+   /*-----------------Background image section-------------*/
+
+  /*-------------------- Header -------------------------*/
+      .header { background-image: linear-gradient( rgba(39,136,245,0.34), rgba(20,36,250,0.34) ), 
+      url("https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200"); background-size: cover; background-position: center; background-attachment: fixed; height: 400px; display: flex; align-items: center; justify-content: center; text-align: center; }
+      .header h1 { color: #0000ff; font-size: 60px; margin: 0; text-align: center; text-shadow: 0px 0px 20px green; }
+      .header p { color: #ff0000; font-size: 20px; line-height: 1.8; text-align: justify; letter-spacing: 2px; text-shadow: 0px 0px 20px gold; }
+      .strike { color: #00ff00; text-decoration: line-through; }
+      .capitalized { color: #0000ff; text-transform: capitalize; }
+
+  /*---------------------------About me---------------------------*/
+      .about {color: rgba(150,197,239,0.43); padding: 40px; text-align: center; font-size: 18px; line-height: 1.8; }
+      .about h2 { color: rgba(35,36,130,0.8); font-size: 35px; }
+
+  /*--------------------------SKILLS-------------*/
+      .skills { padding: 40px; text-align: center; }
+      .skills h2 { color: rgba(207,216,225,0.23); font-size: 35px; }
+      .skill-box { display: flex; justify-content: center; gap: 15px; background-color: rgba(138,185,220,0.28); }  
+      .skill { background: linear-gradient(blue, red); color: gold; padding: 15px 25px; border: 2px solid gold; font-size: 16px; box-shadow: 0px 5px 20px gold; } 
+      .skill:hover { box-shadow: 0px 0px 30px gold; }
+      
+    
+
+  /*----------------------CONTACTS---------------*/
+    
+      .contact { background-color: rgba(136,163,188,0.23); padding: 40px; text-align: center; } 
+      .contact h2 { color: rgba(12,12,12,1); font-size: 35px; }
+      .contact input { padding: 10px; font-size: 16px; width: 250px; border: 1px solid gold; background-color: rgba(47,81,112,0.23); color: white; } 
+      .contact button { background-color: rgba(78,118,157,0.23); color: black; padding: 10px 15px; font-size: 16px; border: none; cursor: pointer; } 
+      .contact h3 { color: rgba(144,78,157,0.23); font-size: 20px; }
+
+ 
+    </style>
+  </head>
+  <body>
+
+   <!------------------HEADER AREA-------------------->
+    <div class="header">
+      <h1>Makkeyu</h1>
+      <p>My Portfolio</p>
+      </div>
+
+    <!------------ABOUT---------------->
+    <div class="about">
+      <h2>About Me</h2>
+      <p>Hello This is Makkeyu, i so happy to visit my page here and im just a beginnner in IT world. Please respct my page. Thank you</p>
+      <p class="strike">I know nothing about IT</p>
+      <p class="capitalized">now i am learning it!</p>
+      
+    </div>
+
+    
+    <!-------------------SKILLS---------------->
+    <div class="skills">
+      <h2>My Skills</h2>
+      <div class="skill-box">
+          <div class="skill"><p>⚡ HTML</p>
+          <div class="skill"><p>🎨 CSS</p>
+          <div class="skill"><p>💻 JavascriptL</p>
+          <div class="skill"><p>🎮 Mobile Legends</p>
+      </div>
+    </div>
+    
+    <!-----------------CONTACTS---------------->
+    <div class="contact">
+        <h2>Contact</h2>
+        <input id="userName" type="text" placeholder="Enter Your Name">
+        <br><br>
+        <button onclick="User()"> Hello!! Welcome</button>
+        <h3 id="message"></h3>
+      
+    </div>
+      <script>
+        function User() { let visitor = document.getElementById("userName").value; 
+                         document.getElementById("message").innerHTML =" Hello "+ visitor +" Thank you for coming!!"; }
+        
+      </script>
+    </div>
+
+  </body>
+</html>
