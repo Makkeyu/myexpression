@@ -27,9 +27,12 @@
       .skills { padding: 40px; text-align: center; }
       .skills h2 { color: rgba(207,216,225,0.23); font-size: 35px; }
       .skill-box { display: flex; justify-content: center; gap: 15px; background-color: rgba(138,185,220,0.28); }  
-      .skill { background: linear-gradient(blue, red); color: gold; padding: 15px 25px; border: 2px solid gold; font-size: 16px; box-shadow: 0px 5px 20px gold; } 
+      .skill { background: linear-gradient(blue, red); color: gold; padding: 15px 25px; border: 2px solid gold; font-size: 16px; box-shadow: 0px 5px 20px gold; transition: all 0.5s ease; } 
       .skill:hover { box-shadow: 0px 0px 30px gold;  transform: rotate(360deg); }
-      
+
+  /*------------------Button------------*/
+      .btn { background-color: gold; color: black; padding: 8px 15px; border: none;  border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; transition: all 0.3s ease; }
+      .btn:hover { background-color: white; transform: scale(1.1); box-shadow: 0px 0px 10px gold; }
     
 
   /*----------------------CONTACTS---------------*/
@@ -67,7 +70,7 @@
       <div class="skill-box">
           <div class="skill">
             <p>⚡</p>
-            <button clas="btn">HTML</button>
+            <button class="btn">HTML</button>
           </div>
           <div class="skill">
             <p>🎨</p>
@@ -75,7 +78,7 @@
           </div>
           <div class="skill">
             <p>💻</p> 
-            <button class="btn">JavascriptL</button>
+            <button class="btn">Javascript</button>
           </div>
           <div class="skill">
             <p>🎮</p>
