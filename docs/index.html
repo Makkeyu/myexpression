@@ -1,107 +1,185 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-  
-  <head>
-    <title>Makkeyu - My Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
-    <style>
-      
-  /* --------------------General------------------------ */
-      body { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+    <head>
+        <title>Flexbox Layouts</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <style>
 
-   /*-----------------Background image section-------------*/
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-  /*-------------------- Header -------------------------*/
-      .header { background-image: linear-gradient( rgba(39,136,245,0.34), rgba(20,36,250,0.34) ),
-        url("hd.jpg"); background-size: cover; background-position: center; background-attachment: fixed; height: 400px; display: flex; align-items: center; justify-content: center; text-align: center; }
-      .header h1 { color: #0000ff; font-size: 60px; margin: 0; text-align: center; text-shadow: 0px 0px 20px green; }
-      .header p { color: #ff0000; font-size: 20px; line-height: 1.8; text-align: justify; letter-spacing: 2px; text-shadow: 0px 0px 20px gold; }
-      .strike { color: #00ff00; text-decoration: line-through; }
-      .capitalized { color: #0000ff; text-transform: capitalize; }
+            body {
+                font-family: 'Poppins', sans-serif;
+                background-color: #1a1a2e;
+                color: white;
+            }
 
-  /*---------------------------About me---------------------------*/
-      .about {color: rgba(150,197,239,0.43); padding: 40px; text-align: center; font-size: 18px; line-height: 1.8; }
-      .about h2 { color: rgba(35,36,130,0.8); font-size: 35px; }
+            /* ---- NAVBAR ---- */
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #16213e;
+                padding: 20px 40px;
+                box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+            }
+            .navbar h1 {
+                color: gold;
+                font-size: 25px;
+            }
+            .nav-links {
+                display: flex;
+                gap: 30px;
+                list-style: none;
+            }
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                transition: color 0.3s ease;
+            }
+            .nav-links a:hover {
+                color: gold;
+            }
 
-  /*--------------------------SKILLS-------------*/
-      .skills { padding: 40px; text-align: center; }
-      .skills h2 { color: rgba(207,216,225,0.23); font-size: 35px; }
-      .skill-box { display: flex; justify-content: center; gap: 15px; background-color: rgba(138,185,220,0.28); }  
-      .skill { background: linear-gradient(blue, red); color: gold; padding: 15px 25px; border: 2px solid gold; font-size: 16px; box-shadow: 0px 5px 20px gold; transition: all 0.5s ease; } 
-      .skill:hover { box-shadow: 0px 0px 30px gold;  transform: rotate(360deg); }
+            /* ---- HERO SECTION ---- */
+            .hero {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 300px;
+                background: linear-gradient(to right, #0f3460, #16213e);
+                text-align: center;
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero h2 {
+                color: gold;
+                font-size: 50px;
+                text-shadow: 0px 0px 20px gold;
+            }
+            .hero p {
+                color: lightgray;
+                font-size: 18px;
+            }
 
-  /*------------------Button------------*/
-      .btn { background-color: gold; color: black; padding: 8px 15px; border: none;  border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; transition: all 0.3s ease; }
-      .btn:hover { background-color: white; transform: scale(1.1); box-shadow: 0px 0px 10px gold; }
-    
+            /* ---- CARDS SECTION ---- */
+            .cards {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+                padding: 50px;
+            }
+            .card {
+                background-color: #16213e;
+                border: 2px solid gold;
+                border-radius: 15px;
+                padding: 30px;
+                width: 200px;
+                text-align: center;
+                box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0px 0px 25px gold;
+            }
+            .card h3 {
+                color: gold;
+                font-size: 35px;
+                margin-bottom: 10px;
+            }
+            .card p {
+                color: lightgray;
+                font-size: 14px;
+            }
 
-  /*----------------------CONTACTS---------------*/
-    
-      .contact { background-color: rgba(136,163,188,0.23); padding: 40px; text-align: center; } 
-      .contact h2 { color: rgba(12,12,12,1); font-size: 35px; }
-      .contact input { padding: 10px; font-size: 16px; width: 250px; border: 1px solid gold; background-color: rgba(47,81,112,0.23); color: white; } 
-      .contact button { background-color: rgba(78,118,157,0.23); color: black; padding: 10px 15px; font-size: 16px; border: none; cursor: pointer; } 
-      .contact h3 { color: rgba(144,78,157,0.23); font-size: 20px; }
+            /* ---- TWO COLUMN LAYOUT ---- */
+            .two-col {
+                display: flex;
+                gap: 30px;
+                padding: 50px;
+                align-items: center;
+            }
+            .col-left {
+                flex: 1;
+                background-color: #16213e;
+                padding: 30px;
+                border-radius: 15px;
+                border: 2px solid gold;
+            }
+            .col-right {
+                flex: 2;
+                background-color: #0f3460;
+                padding: 30px;
+                border-radius: 15px;
+            }
+            .col-left h3 {
+                color: gold;
+                margin-bottom: 15px;
+            }
+            .col-right h3 {
+                color: gold;
+                margin-bottom: 15px;
+            }
 
- 
-    </style>
-  </head>
-  <body>
+        </style>
+    </head>
+    <body>
 
-   <!------------------HEADER AREA-------------------->
-    <div class="header">
-      <h1>Makkeyu</h1>
-      <p>My Portfolio</p>
-      </div>
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <h1>Makkeyu</h1>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
 
-    <!------------ABOUT---------------->
-    <div class="about">
-      <h2>About Me</h2>
-      <p>Hello This is Makkeyu, i so happy to visit my page here and im just a beginnner in IT world. Please respct my page. Thank you</p>
-      <p class="strike">I know nothing about IT</p>
-      <p class="capitalized">now i am learning it!</p>
-      
-    </div>
+        <!-- HERO -->
+        <div class="hero">
+            <h2>Future IT Professional</h2>
+            <p>Learning Web Development one lesson at a time!</p>
+        </div>
 
-    
-    <!-------------------SKILLS---------------->
-    <div class="skills">
-      <h2>My Skills</h2>
-      <div class="skill-box">
-          <div class="skill">
-            <p>⚡</p>
-            <button class="btn">HTML</button>
-          </div>
-          <div class="skill">
-            <p>🎨</p>
-            <button class="btn">CSS</button>
-          </div>
-          <div class="skill">
-            <p>💻</p> 
-            <button class="btn">Javascript</button>
-          </div>
-          <div class="skill">
-            <p>🎮</p>
-           <button class="btn">Mobile Legends</button>
-          </div>
-      </div>
-    </div>
-    
-    <!-----------------CONTACTS---------------->
-    <div class="contact">
-        <h2>Contact</h2>
-        <input id="userName" type="text" placeholder="Enter Your Name">
-        <br><br>
-        <button onclick="User()"> Hello!! Welcome</button>
-        <h3 id="message"></h3>
-      
-    </div>
-      <script>
-        function User() { let visitor = document.getElementById("userName").value; 
-                         document.getElementById("message").innerHTML =" Hello "+ visitor +" Thank you for coming!!"; }
-        
-      </script>
-    </div>
+        <!-- CARDS -->
+        <div class="cards">
+            <div class="card">
+                <h3>⚡</h3>
+                <p>HTML Structure</p>
+            </div>
+            <div class="card">
+                <h3>🎨</h3>
+                <p>CSS Styling</p>
+            </div>
+            <div class="card">
+                <h3>💻</h3>
+                <p>Javascript</p>
+            </div>
+            <div class="card">
+                <h3>🎮</h3>
+                <p>Mobile Legends</p>
+            </div>
+        </div>
 
-  </body>
+        <!-- TWO COLUMN -->
+        <div class="two-col">
+            <div class="col-left">
+                <h3>About Me</h3>
+                <p>I am Makkeyu — a beginner IT student working hard every day to become a professional web developer!</p>
+            </div>
+            <div class="col-right">
+                <h3>My Goals</h3>
+                <p>Master HTML, CSS and JavaScript. Then learn React and build real professional websites that I can show to employers and clients!</p>
+            </div>
+        </div>
+
+    </body>
 </html>
