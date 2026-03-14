@@ -1,106 +1,102 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hover Effects</title>
+        <title>Backgrounds and Shadows</title>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
         <style>
 
             body {
-                background-color: #1a1a2e;
+                margin: 0;
+                padding: 0;
                 font-family: 'Poppins', sans-serif;
+            }
+
+            /* Background image section */
+            .hero {
+                background-image: linear-gradient(
+                    rgba(0,0,0,0.7),
+                    rgba(0,0,0,0.7)
+                ),
+                url("https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200");
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                height: 400px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .hero h1 {
+                color: gold;
+                font-size: 70px;
+                font-weight: 700;
+                text-shadow: 0px 0px 30px gold;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+            }
+
+            .hero p {
+                color: white;
+                font-size: 20px;
+                text-shadow: 2px 2px 5px black;
+            }
+
+            /* Box shadow cards */
+            .cards {
+                background-color: #1a1a2e;
+                padding: 50px;
                 display: flex;
                 justify-content: center;
                 gap: 20px;
-                padding: 50px;
             }
 
-            /* ---- BASIC HOVER ---- */
             .card {
                 background-color: #16213e;
                 color: white;
                 padding: 30px;
-                width: 180px;
+                width: 200px;
                 text-align: center;
                 border-radius: 15px;
-                border: 2px solid transparent;
-                box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
-                cursor: pointer;
-
-                /* transition — animate ALL changes smoothly */
-                transition: all 0.3s ease;
+                box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
             }
 
-            /* hover — changes smoothly because of transition! */
             .card:hover {
-                background-color: #0f3460;
-                border: 2px solid gold;
-                box-shadow: 0px 0px 25px gold;
-                transform: translateY(-10px);  /* floats up! */
+                box-shadow: 0px 0px 30px gold;
             }
 
             .card h2 {
                 color: gold;
-                font-size: 30px;
-                transition: all 0.3s ease;
-            }
-
-            .card:hover h2 {
-                transform: scale(1.2);   /* heading gets bigger on hover */
-                text-shadow: 0px 0px 15px gold;
-            }
-
-            .card p {
-                color: lightgray;
-                font-size: 14px;
-                opacity: 0.7;
-                transition: opacity 0.3s ease;
-            }
-
-            .card:hover p {
-                opacity: 1;   /* text becomes fully visible on hover */
-            }
-
-            /* ---- BUTTON HOVER ---- */
-            .btn {
-                background-color: gold;
-                color: black;
-                padding: 12px 25px;
-                border: none;
-                border-radius: 25px;
-                font-size: 16px;
-                font-weight: 700;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                display: block;
-                margin: 10px auto 0;
-            }
-
-            .btn:hover {
-                background-color: white;
-                transform: scale(1.1);
-                box-shadow: 0px 0px 20px gold;
+                text-shadow: 0px 0px 10px gold;
             }
 
         </style>
     </head>
     <body>
 
-        <div class="card">
-            <h2>⚡</h2>
-            <p>HTML Structure</p>
-            <button class="btn">Learn</button>
+        <!-- Hero Section -->
+        <div class="hero">
+            <div>
+                <h1>Makkeyu</h1>
+                <p>Future IT Professional</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>🎨</h2>
-            <p>CSS Styling</p>
-            <button class="btn">Learn</button>
-        </div>
-
-        <div class="card">
-            <h2>💻</h2>
-            <p>JavaScript</p>
-            <button class="btn">Learn</button>
+        <!-- Cards Section -->
+        <div class="cards">
+            <div class="card">
+                <h2>⚡ HTML</h2>
+                <p>Structure of websites</p>
+            </div>
+            <div class="card">
+                <h2>🎨 CSS</h2>
+                <p>Style of websites</p>
+            </div>
+            <div class="card">
+                <h2>💻 JS</h2>
+                <p>Interactivity of websites</p>
+            </div>
         </div>
 
     </body>
