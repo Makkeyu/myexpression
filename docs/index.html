@@ -1,69 +1,61 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Text Styling</title>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
         <style>
             body {
-                background-color: #1a1a2e;
-                padding: 40px;
-                font-family: 'Poppins', sans-serif;
-            }
-
-            .heading {
-                color: gold;
-                font-size: 60px;
-                font-weight: 700;
+                background: linear-gradient(to bottom, #1a1a2e, #16213e);
+                font-family: Arial;
                 text-align: center;
-                letter-spacing: 5px;
-                text-transform: uppercase;
+                padding: 30px;
             }
 
-            .subheading {
-                color: lightblue;
-                font-size: 25px;
-                font-style: italic;
-                text-align: center;
-                letter-spacing: 2px;
-            }
-
-            .paragraph {
+            .box1 {
+                background-color: #ff0000;
                 color: white;
-                font-size: 18px;
-                font-weight: 400;
-                line-height: 1.8;
-                text-align: justify;
+                padding: 20px;
+                margin: 10px auto;
+                width: 300px;
             }
 
-            .highlight {
-                color: gold;
-                font-weight: 700;
-                text-decoration: underline;
+            .box2 {
+                background-color: rgb(0, 128, 255);
+                color: white;
+                padding: 20px;
+                margin: 10px auto;
+                width: 300px;
             }
 
-            .striked {
-                color: gray;
-                text-decoration: line-through;
+            .box3 {
+                background-color: rgba(255, 215, 0, 0.5);
+                color: black;
+                padding: 20px;
+                margin: 10px auto;
+                width: 300px;
             }
 
-            .caps {
-                color: lightgreen;
-                text-transform: uppercase;
-                letter-spacing: 3px;
+            .box4 {
+                background: linear-gradient(to right, purple, pink);
+                color: white;
+                padding: 20px;
+                margin: 10px auto;
+                width: 300px;
+            }
+
+            .box5 {
+                background: radial-gradient(circle, gold, black);
+                color: white;
+                padding: 20px;
+                margin: 10px auto;
+                width: 300px;
             }
         </style>
     </head>
     <body>
-
-        <p class="heading">Makkeyu</p>
-        <p class="subheading">Future IT Professional</p>
-        <p class="paragraph">
-            I am learning web development and I love it!
-            Every day I get better at HTML, CSS and JavaScript.
-            <span class="highlight">My goal is to become a professional developer!</span>
-        </p>
-        <p class="striked">I know nothing about IT</p>
-        <p class="caps">now I know html css and javascript!</p>
-
+        <h1 style="color: white;">CSS Colors!</h1>
+        <div class="box1">HEX Color #ff0000</div>
+        <div class="box2">RGB Color rgb(0, 128, 255)</div>
+        <div class="box3">RGBA Color rgba(255, 215, 0, 0.5)</div>
+        <div class="box4">Linear Gradient purple to pink</div>
+        <div class="box5">Radial Gradient gold to black</div>
     </body>
 </html>
